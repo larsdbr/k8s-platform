@@ -1,7 +1,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: dev-team
-  namespace: apps
+  name: blue-team
+  namespace: blue-apps
 spec:
-  path: ./production
+  path: ./staging

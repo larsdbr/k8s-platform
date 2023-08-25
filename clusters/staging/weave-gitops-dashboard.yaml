@@ -26,9 +26,9 @@ metadata:
   name: ww-gitops
   namespace: flux-system
 spec:
+  serviceAccountName: blue-team
   chart:
     spec:
-      serviceAccountName: blue-team
       chart: weave-gitops
       sourceRef:
         kind: HelmRepository

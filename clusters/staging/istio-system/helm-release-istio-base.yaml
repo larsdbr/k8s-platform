@@ -4,9 +4,6 @@ metadata:
   name: istio-base
   namespace: istio-system
 spec:
-  dependsOn:
-    - name: istio
-      namespace: istio-system
   interval: 5m
   chart:
     spec:

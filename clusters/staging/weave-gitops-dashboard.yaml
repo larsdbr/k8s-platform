@@ -32,7 +32,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: ww-gitops
-  interval: 1h0m0s
+  interval: 0h5m0s
   values:
     adminUser:
       create: true

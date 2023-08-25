@@ -28,6 +28,7 @@ metadata:
 spec:
   chart:
     spec:
+      serviceAccountName: blue-team
       chart: weave-gitops
       sourceRef:
         kind: HelmRepository

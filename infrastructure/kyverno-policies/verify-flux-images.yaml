@@ -28,7 +28,7 @@ spec:
             - "docker.io/fluxcd/notification-controller:*"
             - "docker.io/fluxcd/image-reflector-controller:*"
             - "docker.io/fluxcd/image-automation-controller:*"
-          mutateDigest: true
+          mutateDigest: false
           verifyDigest: true
           required: true
           attestors:

@@ -12,6 +12,7 @@ spec:
   dependsOn:
   - name: kyverno-policies
   interval: 5m0s
+  serviceAccountName: kustomize-controller
   path: ./tenants/staging
   prune: true
   sourceRef:

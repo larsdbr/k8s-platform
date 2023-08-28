@@ -17,6 +17,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: metallb-loadbalancer
+  namespace: metallb-system
 spec:
   type: LoadBalancer
   selector:

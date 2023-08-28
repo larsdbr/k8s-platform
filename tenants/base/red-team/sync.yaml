@@ -10,7 +10,7 @@ spec:
     branch: main
   secretRef:
     name: red-team-auth
-  url: https://github.com/larsdbr/k8s-tenant-red
+  url: ssh://git@github.com/larsdbr/k8s-tenant-red
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization

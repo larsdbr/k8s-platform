@@ -12,3 +12,15 @@ kind: L2Advertisement
 metadata:
   name: empty
   namespace: metallb-system
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: metallb-loadbalancer
+spec:
+  type: LoadBalancer
+  selector:
+    istio: ingress
+  ports:
+  # Default port used by the image
+  - port: 5678

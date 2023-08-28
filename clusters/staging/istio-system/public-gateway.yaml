@@ -4,7 +4,6 @@ metadata:
   name: public-gateway
   namespace: istio-system
 spec:
-  serviceAccountName: istio-controller
   selector:
     istio: ingressgateway # use istio default controller
   servers:

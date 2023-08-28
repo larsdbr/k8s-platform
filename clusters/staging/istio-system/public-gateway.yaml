@@ -7,7 +7,7 @@ spec:
   # The selector matches the ingress gateway pod labels.
   # If you installed Istio using Helm following the standard documentation, this would be "istio=ingress"
   selector:
-    istio: ingress # use istio default controller
+    istio: ingress # use istio Helm chart default controller
   servers:
   - port:
       number: 80

@@ -3,34 +3,33 @@ apiVersion: v1
 kind: Namespace
 metadata:
   labels:
-    toolkit.fluxcd.io/tenant: blue-team
+    toolkit.fluxcd.io/tenant: red-team
     istio-injection: enabled
-  name: blue-apps
-
+  name: red-apps
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   labels:
-    toolkit.fluxcd.io/tenant: blue-team
-  name: blue-team
-  namespace: blue-apps
-
+    toolkit.fluxcd.io/tenant: red-team
+  name: red-team
+  namespace: red-apps
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   labels:
-    toolkit.fluxcd.io/tenant: blue-team
-  name: gotk-reconciler
-  namespace: blue-apps
+    toolkit.fluxcd.io/tenant: red-team
+  name: red-team-reconciler
+  namespace: red-apps
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: cluster-admin
 subjects:
-- kind: User
-  name: gotk:apps:reconciler
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: gotk:red-apps:reconciler
 - kind: ServiceAccount
-  name: blue-team
-  namespace: blue-apps
+  name: red-team
+  namespace: red-apps

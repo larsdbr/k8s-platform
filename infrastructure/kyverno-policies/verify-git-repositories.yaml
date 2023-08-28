@@ -6,7 +6,7 @@ spec:
   # This provides users a working example of how an admin
   # would be able to enforce git repository sources across
   # all tenants.
-  validationFailureAction: Audit # Change to 'Enforce' once the specific org url is set.
+  validationFailureAction: Enforce # Change to 'Enforce' once the specific org url is set.
   rules:
     - name: github-repositories-only
       exclude:
@@ -19,9 +19,9 @@ spec:
             kinds:
               - GitRepository
       validate:
-        message: ".spec.url must be from a repository within the organisation X"
+        message: ".spec.url must be from a repository within the organisation holdbar-com"
         anyPattern:
         - spec:
-            url: "https://github.com/fluxcd/?*" # repositories in fluxcd via https
+            url: "https://github.com/holdbar-com/?*" # repositories in holdbar-com via https
         - spec:
-            url: "ssh://git@github.com:fluxcd/?*" # repositories in fluxcd via ssh
+            url: "ssh://git@github.com:holdbar-com/?*" # repositories in holdbar-com via ssh

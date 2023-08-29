@@ -4,6 +4,7 @@ metadata:
   name: istio-ingress
   namespace: istio-system
 spec:
+  serviceAccountName: istio-controller
   interval: 5m
   dependsOn:
     - name: istio-base

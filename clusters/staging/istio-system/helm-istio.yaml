@@ -6,6 +6,13 @@ metadata:
     name: istio-system
   name: istio-system
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    name: istio-ingress
+  name: istio-ingress
+---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:

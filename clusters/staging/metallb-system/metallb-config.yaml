@@ -21,7 +21,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    istio: ingressgateway
+    istio: ingress
   ports:
   # Default port used by the image
   - port: 5678

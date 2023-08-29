@@ -4,6 +4,7 @@ metadata:
   name: public-gateway
   namespace: istio-system
 spec:
+  serviceAccountName: istio-controller
   # The selector matches the ingress gateway pod labels.
   # If you installed Istio using Helm following the standard documentation, this would be "istio=ingress"
   selector:
